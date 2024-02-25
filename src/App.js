@@ -15,6 +15,8 @@ import Cart from './pages/Cart/Cart';
 import Navbar from './components/Navbar/Navbar';
 import Product from './pages/Product/ProductView';
 import Order from './pages/Order/Order';
+import DeveloperInfo from './components/DeveloperInfo';
+import Documentation from './pages/Documentation';
 
 
 function App() {
@@ -33,7 +35,9 @@ function App() {
               <Route Component={Profile} path='/profile/:username/' />
               <Route Component={Checkout} path='/checkout/'/>
               <Route Component={Cart} path='/cart/'/>
+              <Route Component={Documentation} path='/documentation'/>
             </Routes>
+            <DeveloperInfo/>
           </OrderItemProvider>
         </CartProvider>
       </BrowserRouter>

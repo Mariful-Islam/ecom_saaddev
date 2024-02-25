@@ -26,6 +26,10 @@ const ProductComponent = ({product}) => {
         getCarts()
     }
 
+    const navigateLogin = () => {
+        navigate('/login')
+    }
+
 
   return (
 
@@ -41,8 +45,16 @@ const ProductComponent = ({product}) => {
                     <p>{product.price}$</p>
                 </div>         
                 <div className='cart_price'>
-                    <button className='addBtn' onClick={onView}>View</button>
-                    <button className='addBtn' onClick={onAdd}>Add</button>
+                    {username ? 
+                    <>
+                        <button className='addBtn' onClick={onView}>View</button>
+                        <button className='addBtn' onClick={onAdd}>Add</button>
+                    </> :
+                    <>
+                        <button className='addBtn' onClick={navigateLogin}>View</button>
+                        <button className='addBtn' onClick={navigateLogin}>Add</button>
+                    </>
+}    
                 </div>
             </div>
       </div>

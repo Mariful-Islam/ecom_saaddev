@@ -43,6 +43,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     gap: 30px 10px;
+    padding-bottom: 100px;
 }
 
 .product_item {
@@ -341,6 +342,7 @@
     justify-items: center;
     align-items: center;
 }
+
 
 
 /*Responsive*/

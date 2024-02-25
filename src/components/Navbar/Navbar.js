@@ -48,6 +48,7 @@ const Navbar = () => {
     { username ?  
     <>
       <NavLink to='/'>Home</NavLink>
+      <NavLink to='/documentation'>Documentation</NavLink>
       <NavLink to='/order/'>Order</NavLink>
       <NavLink to={`/profile/${username}/`}>{username}</NavLink>
       <button className='Btn' onClick={onLogout}>Logout</button>
@@ -56,12 +57,10 @@ const Navbar = () => {
     </> :
     <>
       <NavLink to=''>Home</NavLink>
-      <NavLink to='service'>Service</NavLink>
-      <NavLink to='product'>Product</NavLink>
+      <NavLink to='/documentation'>Documentation</NavLink>
       <NavLink to='login'>Login</NavLink>
       <NavLink to='/signup/'>Sign Up</NavLink>
-      <NavLink to='cart'><span className='items_num'>{carts ? totalProductQuantity : 0}</span>
-        <img className='cart-icon' src={cart} alt='cart' /></NavLink>  
+      
     </> 
     }
     </div>
